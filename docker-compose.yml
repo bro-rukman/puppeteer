@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    container_name: 'puppeteer'
+    network_mode: 'host'
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 6500:6500
+    environment:
+      - SERVER_PORT=6500
